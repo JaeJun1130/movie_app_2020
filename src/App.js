@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import Movie from "./Movie";
 import axios from "axios";
-import "./App.css";
+
+import "./Movie.css";
 
 class App extends React.Component {
   state = {
