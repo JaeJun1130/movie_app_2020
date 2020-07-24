@@ -5,26 +5,26 @@
 }
 
 .loader {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 300;
-  font-size: 30px;
-  color: white;
 }
 
 .movies {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  /*요소들이 강제로 한줄에 배치되게 할 것인지, 
-      또는 가능한 영역 내에서 벗어나지 않고 여러행으로 나누어 표현 할 것인지 결정하는 속성입니다. 
-      만약 영역 내에서 벗어나지 못하게 설정한다면, 
-      동시에 요소의 방향 축을 결정할 수 있습니다. */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(400px, 1fr));
+  grid-gap: 100px;
   padding: 50px;
-  padding-top: 70px;
   width: 80%;
+  padding-top: 70px;
+}
+
+@media screen and (max-width: 1090px) {
+  .movies {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
 }
