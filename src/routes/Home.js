@@ -29,6 +29,7 @@ class Home extends React.Component {
 
   render() {
     const { isLoding, movies } = this.state;
+    console.log(movies);
     return (
       <section className="container">
         {isLoding ? (
@@ -46,6 +47,7 @@ class Home extends React.Component {
                 summary={movie.summary}
                 poster={movie.medium_cover_image}
                 genres={movie.genres}
+                background_image={movie.background_image}
               />
             ))}
           </div>
