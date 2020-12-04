@@ -21,7 +21,8 @@ border: none;
 function About(props) {
   console.log(props);
   return (
-    <Fragment>    <div className="about__container">
+    <Fragment>    
+      <div className="about__container">
     <span>
       "3B 1조 캡스톤"
       {<br></br>} 
@@ -30,12 +31,11 @@ function About(props) {
       "정성진,최정규,이민호"
     </span>
     <span>− 인덕대학교 컴퓨터 소프트웨어학과</span>
-
   </div>
-  <ImgBox>
-  <Img src={img} />
-</ImgBox>
-          </Fragment>
+          <ImgBox>
+            <Img src={img} />
+          </ImgBox>
+    </Fragment>
 
   );
 }
